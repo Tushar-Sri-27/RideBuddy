@@ -1,0 +1,677 @@
+/* ========================================
+   Home Page — Light Theme
+   ======================================== */
+
+/* ==================== HERO ==================== */
+.rb-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(160deg, var(--rb-bg) 0%, var(--rb-primary-50) 40%, var(--rb-bg) 100%);
+}
+
+.rb-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Subtle decorative blobs instead of dark orbs */
+.rb-hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.rb-hero-orb-1 {
+  width: 450px;
+  height: 450px;
+  background: var(--rb-primary-100);
+  top: -15%;
+  right: -8%;
+  opacity: 0.6;
+}
+
+.rb-hero-orb-2 {
+  width: 300px;
+  height: 300px;
+  background: var(--rb-green-100);
+  bottom: 5%;
+  left: -5%;
+  opacity: 0.5;
+}
+
+.rb-hero-orb-3 {
+  width: 200px;
+  height: 200px;
+  background: #ede9fe;
+  top: 40%;
+  left: 35%;
+  opacity: 0.4;
+}
+
+.rb-hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at 40% 50%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 40% 50%, black 20%, transparent 70%);
+}
+
+/* ---------- Hero Content ---------- */
+.rb-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.rb-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.9rem;
+  background: var(--rb-primary-50);
+  border: 1px solid var(--rb-primary-100);
+  border-radius: var(--rb-radius-full);
+  color: var(--rb-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.rb-hero-badge i {
+  font-size: 0.85rem;
+  color: var(--rb-amber-light);
+}
+
+.rb-hero-title {
+  font-family: var(--rb-font-heading);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  letter-spacing: -1.5px;
+  color: var(--rb-text-primary);
+}
+
+.rb-hero-subtitle {
+  font-size: 1.08rem;
+  color: var(--rb-text-muted);
+  max-width: 500px;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.rb-hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.rb-btn-lg {
+  padding: 0.8rem 1.8rem !important;
+  font-size: 0.95rem !important;
+}
+
+/* ---------- Trust / Avatar Stack ---------- */
+.rb-hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.rb-avatar-stack {
+  display: flex;
+}
+
+.rb-avatar-bubble {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--rb-primary);
+  color: #ffffff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--rb-bg);
+  margin-left: -8px;
+}
+
+.rb-avatar-bubble:first-child {
+  margin-left: 0;
+}
+
+.rb-avatar-bubble:nth-child(2) { background: var(--rb-green); }
+.rb-avatar-bubble:nth-child(3) { background: #7c3aed; }
+.rb-avatar-bubble:nth-child(4) { background: var(--rb-amber); }
+
+.rb-trust-text {
+  font-size: 0.84rem;
+  color: var(--rb-text-muted);
+}
+
+.rb-trust-text strong {
+  color: var(--rb-text-primary);
+  font-weight: 600;
+}
+
+/* ---------- Hero Visual (Right Column) ---------- */
+.rb-hero-visual {
+  position: relative;
+  padding: 2rem;
+}
+
+.rb-hero-card {
+  padding: 1.6rem;
+  width: 295px;
+  box-shadow: var(--rb-shadow-lg);
+  animation: float 7s ease-in-out infinite;
+}
+
+.rb-hero-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--rb-text-muted);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rb-hero-card-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.rb-hero-card-route {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.rb-route-point {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.rb-route-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.rb-route-dot-start {
+  background: var(--rb-green);
+}
+
+.rb-route-dot-end {
+  background: var(--rb-primary);
+}
+
+.rb-route-point span {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--rb-text-primary);
+}
+
+.rb-route-line {
+  width: 2px;
+  height: 16px;
+  background: linear-gradient(to bottom, var(--rb-green-light), var(--rb-primary-light));
+  margin-left: 4px;
+  border-radius: 2px;
+}
+
+.rb-hero-card-details {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+}
+
+.rb-detail-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.6rem;
+  background: var(--rb-bg-alt);
+  border-radius: var(--rb-radius-full);
+  font-size: 0.72rem;
+  color: var(--rb-text-muted);
+  font-weight: 500;
+}
+
+.rb-detail-chip-accent {
+  background: var(--rb-green-50);
+  color: var(--rb-green);
+}
+
+.rb-hero-card-price {
+  font-family: var(--rb-font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+}
+
+.rb-hero-card-price span {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--rb-text-muted);
+}
+
+/* Floating badges */
+.rb-hero-floating-badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--rb-text-primary);
+  box-shadow: var(--rb-shadow-md);
+}
+
+.rb-float-1 {
+  top: 5px;
+  right: -15px;
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.rb-float-2 {
+  bottom: 25px;
+  left: -5px;
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+/* ==================== STATS BAR ==================== */
+.rb-stats-bar {
+  padding: 2rem 0;
+  background: var(--rb-bg-card);
+  border-top: 1px solid var(--rb-border);
+  border-bottom: 1px solid var(--rb-border);
+}
+
+.rb-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+}
+
+.rb-stat-icon {
+  font-size: 1.35rem;
+  color: var(--rb-primary);
+}
+
+.rb-stat-value {
+  font-family: var(--rb-font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+  line-height: 1.2;
+}
+
+.rb-stat-label {
+  font-size: 0.78rem;
+  color: var(--rb-text-muted);
+  font-weight: 500;
+}
+
+/* ==================== SECTION HEADER ==================== */
+.rb-section-tag {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  background: var(--rb-primary-50);
+  border: 1px solid var(--rb-primary-100);
+  border-radius: var(--rb-radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--rb-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.8rem;
+}
+
+.rb-section-title {
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.6rem;
+  color: var(--rb-text-primary);
+}
+
+.rb-section-desc {
+  font-size: 1rem;
+  color: var(--rb-text-muted);
+  max-width: 540px;
+  margin: 0 auto 1rem;
+  line-height: 1.7;
+}
+
+/* ==================== FEATURES (HOW IT WORKS) ==================== */
+.rb-feature-card {
+  padding: 1.8rem 1.4rem;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--rb-transition-base);
+}
+
+.rb-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--rb-shadow-lg);
+  border-color: var(--rb-primary-100);
+}
+
+.rb-feature-step {
+  font-family: var(--rb-font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--rb-border);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+  transition: color var(--rb-transition-base);
+}
+
+.rb-feature-card:hover .rb-feature-step {
+  color: var(--rb-primary-100);
+}
+
+.rb-feature-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  transition: transform var(--rb-transition-base);
+}
+
+.rb-feature-card:hover .rb-feature-icon {
+  transform: scale(1.1);
+}
+
+.rb-feature-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--rb-text-primary);
+}
+
+.rb-feature-desc {
+  font-size: 0.86rem;
+  color: var(--rb-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==================== WHY RIDEBUDDY ==================== */
+.rb-benefit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-top: 1.25rem;
+}
+
+.rb-benefit-item {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+
+.rb-benefit-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--rb-primary-50);
+  border-radius: var(--rb-radius-sm);
+  color: var(--rb-primary);
+  font-size: 1.1rem;
+  transition: all var(--rb-transition-base);
+}
+
+.rb-benefit-item:hover .rb-benefit-icon {
+  background: var(--rb-primary);
+  color: #ffffff;
+}
+
+.rb-benefit-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--rb-text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.rb-benefit-desc {
+  font-size: 0.84rem;
+  color: var(--rb-text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Why Visual Cards */
+.rb-why-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 380px;
+}
+
+.rb-why-card {
+  padding: 1.4rem;
+  transition: all var(--rb-transition-base);
+}
+
+.rb-why-card:hover {
+  transform: translateX(6px);
+  box-shadow: var(--rb-shadow-md);
+  border-color: var(--rb-primary-100);
+}
+
+.rb-why-card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.rb-why-card h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  color: var(--rb-text-primary);
+}
+
+.rb-why-card p {
+  font-size: 0.84rem;
+  color: var(--rb-text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ==================== TESTIMONIALS ==================== */
+.rb-testimonial-card {
+  padding: 1.6rem;
+  height: 100%;
+  transition: all var(--rb-transition-base);
+}
+
+.rb-testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--rb-shadow-md);
+  border-color: var(--rb-primary-100);
+}
+
+.rb-testimonial-stars {
+  display: flex;
+  gap: 0.15rem;
+  margin-bottom: 0.8rem;
+  color: var(--rb-amber-light);
+  font-size: 0.82rem;
+}
+
+.rb-testimonial-text {
+  font-size: 0.92rem;
+  color: var(--rb-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.1rem;
+  font-style: italic;
+}
+
+.rb-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.rb-testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--rb-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.rb-testimonial-name {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--rb-text-primary);
+}
+
+.rb-testimonial-role {
+  font-size: 0.76rem;
+  color: var(--rb-text-tertiary);
+}
+
+/* ==================== CTA ==================== */
+.rb-cta-section {
+  position: relative;
+  padding: 5rem 0;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--rb-primary-50) 0%, var(--rb-bg) 50%, #ede9fe 100%);
+}
+
+.rb-cta-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.rb-cta-section .rb-hero-orb-1 {
+  width: 350px;
+  height: 350px;
+  top: -20%;
+  right: -10%;
+  opacity: 0.4;
+}
+
+.rb-cta-section .rb-hero-orb-2 {
+  width: 250px;
+  height: 250px;
+  bottom: -15%;
+  left: -5%;
+  opacity: 0.35;
+}
+
+.rb-cta-title {
+  font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.5px;
+  color: var(--rb-text-primary);
+}
+
+.rb-cta-subtitle {
+  font-size: 1.05rem;
+  color: var(--rb-text-muted);
+  margin-bottom: 1.8rem;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rb-cta-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 991.98px) {
+  .rb-hero {
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 3rem;
+  }
+
+  .rb-hero .row {
+    min-height: auto !important;
+  }
+
+  .rb-hero-title {
+    font-size: 2.4rem;
+  }
+
+  .rb-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .rb-section-desc {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .rb-hero-title {
+    font-size: 1.9rem;
+  }
+
+  .rb-hero-actions {
+    flex-direction: column;
+  }
+
+  .rb-hero-actions .rb-btn-primary,
+  .rb-hero-actions .rb-btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .rb-stat-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.35rem;
+    padding: 0.6rem;
+  }
+
+  .rb-cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rb-section,
+  .rb-section-alt {
+    padding: 3.5rem 0;
+  }
+}

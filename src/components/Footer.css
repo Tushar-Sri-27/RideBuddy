@@ -1,0 +1,157 @@
+/* ========================================
+   Footer — Light Theme
+   ======================================== */
+
+.rb-footer {
+  background: var(--rb-text-primary);
+  color: #cbd5e1;
+  padding-top: 3.5rem;
+  padding-bottom: 0;
+  margin-top: auto;
+}
+
+.rb-footer-top {
+  padding-bottom: 2rem;
+}
+
+/* ---------- Brand ---------- */
+.rb-footer-brand .rb-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.rb-footer-brand .rb-brand-text {
+  color: #ffffff;
+}
+
+.rb-footer-brand .rb-brand-highlight {
+  color: var(--rb-primary-light);
+  -webkit-text-fill-color: unset;
+  background: none;
+}
+
+.rb-footer-tagline {
+  color: #94a3b8;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  max-width: 300px;
+  margin-bottom: 1.2rem;
+}
+
+/* ---------- Socials ---------- */
+.rb-footer-socials {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rb-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--rb-radius-sm);
+  color: #94a3b8;
+  font-size: 0.9rem;
+  transition: all var(--rb-transition-base);
+}
+
+.rb-social-link:hover {
+  background: var(--rb-primary);
+  border-color: var(--rb-primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ---------- Link Columns ---------- */
+.rb-footer-heading {
+  font-family: var(--rb-font-heading);
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #e2e8f0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.9rem;
+}
+
+.rb-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rb-footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.rb-footer-links a {
+  color: #94a3b8;
+  font-size: 0.86rem;
+  transition: all var(--rb-transition-fast);
+}
+
+.rb-footer-links a:hover {
+  color: #ffffff;
+  padding-left: 3px;
+}
+
+.rb-footer-contact li {
+  color: #94a3b8;
+  font-size: 0.86rem;
+}
+
+.rb-footer-contact i {
+  color: var(--rb-primary-light);
+}
+
+/* ---------- Divider ---------- */
+.rb-footer-divider {
+  border-color: rgba(255, 255, 255, 0.08);
+  margin: 0;
+  opacity: 1;
+}
+
+/* ---------- Bottom ---------- */
+.rb-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 0;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.rb-footer-copy {
+  color: #64748b;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.rb-heart {
+  color: #ef4444;
+  font-size: 0.65rem;
+  margin: 0 0.15rem;
+  display: inline-block;
+}
+
+.rb-footer-credits {
+  color: #64748b;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 767.98px) {
+  .rb-footer {
+    padding-top: 2.5rem;
+  }
+
+  .rb-footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,333 @@
+/* ========================================
+   RideBuddy — Light Theme Design System
+   Inspired by Notion, Linear, Stripe, Airbnb
+   ======================================== */
+
+/* ---------- CSS Custom Properties ---------- */
+:root {
+  /* Primary */
+  --rb-primary: #2563eb;
+  --rb-primary-light: #3b82f6;
+  --rb-primary-dark: #1d4ed8;
+  --rb-primary-50: #eff6ff;
+  --rb-primary-100: #dbeafe;
+  --rb-primary-glow: rgba(37, 99, 235, 0.12);
+
+  /* Green Accent (ride actions) */
+  --rb-green: #16a34a;
+  --rb-green-light: #22c55e;
+  --rb-green-50: #f0fdf4;
+  --rb-green-100: #dcfce7;
+
+  /* Amber / Warning */
+  --rb-amber: #d97706;
+  --rb-amber-light: #f59e0b;
+  --rb-amber-50: #fffbeb;
+
+  /* Danger */
+  --rb-danger: #dc2626;
+  --rb-danger-50: #fef2f2;
+
+  /* Backgrounds */
+  --rb-bg: #f8f9fb;
+  --rb-bg-alt: #f1f3f8;
+  --rb-bg-card: #ffffff;
+  --rb-bg-elevated: #ffffff;
+
+  /* Text */
+  --rb-text-primary: #1e293b;
+  --rb-text-secondary: #475569;
+  --rb-text-tertiary: #94a3b8;
+  --rb-text-muted: #64748b;
+
+  /* Borders */
+  --rb-border: #e5e7eb;
+  --rb-border-light: #f0f1f3;
+  --rb-border-focus: var(--rb-primary);
+
+  /* Typography */
+  --rb-font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --rb-font-heading: 'Outfit', 'Inter', system-ui, sans-serif;
+
+  /* Radius */
+  --rb-radius-sm: 8px;
+  --rb-radius-md: 12px;
+  --rb-radius-lg: 14px;
+  --rb-radius-xl: 20px;
+  --rb-radius-full: 9999px;
+
+  /* Shadows */
+  --rb-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --rb-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --rb-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
+  --rb-shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  --rb-shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --rb-transition-fast: 0.15s ease;
+  --rb-transition-base: 0.25s ease;
+  --rb-transition-smooth: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--rb-font-body);
+  font-weight: 400;
+  color: var(--rb-text-primary);
+  background: var(--rb-bg);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--rb-font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--rb-text-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--rb-primary);
+  transition: color var(--rb-transition-fast);
+}
+
+a:hover {
+  color: var(--rb-primary-dark);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- Utility Classes ---------- */
+.rb-gradient-text {
+  background: linear-gradient(135deg, var(--rb-primary), #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.rb-section {
+  padding: 5rem 0;
+}
+
+.rb-section-alt {
+  padding: 5rem 0;
+  background: var(--rb-bg-alt);
+}
+
+/* ---------- Card ---------- */
+.rb-glass {
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  box-shadow: var(--rb-shadow-sm);
+}
+
+.rb-glass-sm {
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-md);
+  box-shadow: var(--rb-shadow-xs);
+}
+
+/* ---------- Buttons ---------- */
+.rb-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.6rem;
+  font-family: var(--rb-font-body);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #ffffff;
+  background: var(--rb-primary);
+  border: none;
+  border-radius: var(--rb-radius-sm);
+  cursor: pointer;
+  transition: all var(--rb-transition-base);
+  box-shadow: var(--rb-shadow-sm);
+  text-decoration: none;
+}
+
+.rb-btn-primary:hover {
+  background: var(--rb-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--rb-shadow-md);
+  color: #ffffff;
+}
+
+.rb-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.6rem;
+  font-family: var(--rb-font-body);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--rb-text-primary);
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-sm);
+  cursor: pointer;
+  transition: all var(--rb-transition-base);
+  text-decoration: none;
+}
+
+.rb-btn-outline:hover {
+  background: var(--rb-bg-alt);
+  border-color: var(--rb-primary-light);
+  color: var(--rb-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--rb-shadow-sm);
+}
+
+.rb-btn-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.6rem;
+  font-family: var(--rb-font-body);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #ffffff;
+  background: var(--rb-green);
+  border: none;
+  border-radius: var(--rb-radius-sm);
+  cursor: pointer;
+  transition: all var(--rb-transition-base);
+  box-shadow: var(--rb-shadow-sm);
+  text-decoration: none;
+}
+
+.rb-btn-accent:hover {
+  background: #15803d;
+  transform: translateY(-1px);
+  box-shadow: var(--rb-shadow-md);
+  color: #ffffff;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* Stagger delays */
+.delay-1 { animation-delay: 0.1s; opacity: 0; }
+.delay-2 { animation-delay: 0.2s; opacity: 0; }
+.delay-3 { animation-delay: 0.3s; opacity: 0; }
+.delay-4 { animation-delay: 0.35s; opacity: 0; }
+.delay-5 { animation-delay: 0.4s; opacity: 0; }
+
+/* ---------- Bootstrap Overrides ---------- */
+.btn:focus,
+.form-control:focus {
+  box-shadow: 0 0 0 3px var(--rb-primary-glow);
+  border-color: var(--rb-primary);
+}
+
+.form-control,
+.form-select {
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  color: var(--rb-text-primary);
+  border-radius: var(--rb-radius-sm);
+  padding: 0.65rem 1rem;
+  font-size: 0.92rem;
+  transition: all var(--rb-transition-fast);
+}
+
+.form-control::placeholder {
+  color: var(--rb-text-tertiary);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background: var(--rb-bg-card);
+  color: var(--rb-text-primary);
+  border-color: var(--rb-primary);
+}
+
+.form-label {
+  color: var(--rb-text-secondary);
+  font-weight: 500;
+  font-size: 0.88rem;
+  margin-bottom: 0.4rem;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--rb-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--rb-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rb-text-tertiary);
+}
+
+/* ---------- Selection ---------- */
+::selection {
+  background: var(--rb-primary-100);
+  color: var(--rb-primary-dark);
+}
