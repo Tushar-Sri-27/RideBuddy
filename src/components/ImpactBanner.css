@@ -1,0 +1,256 @@
+/* ========================================
+   Impact Banner — All Variants
+   ======================================== */
+
+/* ==================== FULL SIZE ==================== */
+.rb-impact-banner {
+  position: relative;
+  padding: 3rem 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ecfdf5 0%, #eff6ff 40%, #fffbeb 100%);
+  border-top: 1px solid var(--rb-border-light);
+  border-bottom: 1px solid var(--rb-border-light);
+}
+
+.rb-impact-banner-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(22, 163, 74, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(37, 99, 235, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Header */
+.rb-impact-banner-header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.rb-impact-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(22, 163, 74, 0.1);
+  border: 1px solid rgba(22, 163, 74, 0.15);
+  border-radius: var(--rb-radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #16a34a;
+  margin-bottom: 0.6rem;
+}
+
+.rb-impact-badge i {
+  font-size: 0.85rem;
+}
+
+.rb-impact-tagline {
+  font-size: 0.92rem;
+  color: var(--rb-text-muted);
+  margin: 0;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Stat Items */
+.rb-impact-item {
+  text-align: center;
+  padding: 1.2rem 0.8rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--rb-border-light);
+  border-radius: var(--rb-radius-md);
+  transition: all var(--rb-transition-base);
+}
+
+.rb-impact-item:hover {
+  background: #ffffff;
+  box-shadow: var(--rb-shadow-md);
+  transform: translateY(-3px);
+}
+
+.rb-impact-item-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--rb-radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.rb-impact-item-value {
+  font-family: var(--rb-font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--rb-text-primary);
+  line-height: 1.2;
+}
+
+.rb-impact-item-label {
+  font-size: 0.76rem;
+  color: var(--rb-text-muted);
+  font-weight: 500;
+  margin-top: 0.1rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Progress bar */
+.rb-impact-item-bar {
+  height: 4px;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.rb-impact-item-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Motivation line */
+.rb-impact-motivation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--rb-border-light);
+  border-radius: var(--rb-radius-full);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--rb-text-secondary);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rb-impact-motivation i {
+  color: #d97706;
+  font-size: 0.9rem;
+}
+
+/* ==================== COMPACT ==================== */
+.rb-impact-compact {
+  background: linear-gradient(135deg, #f0fdf4, #eff6ff);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  padding: 1rem 1.25rem;
+  transition: all var(--rb-transition-base);
+}
+
+.rb-impact-compact:hover {
+  box-shadow: var(--rb-shadow-sm);
+}
+
+.rb-impact-compact-content {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.rb-impact-compact-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: var(--rb-radius-sm);
+  background: rgba(22, 163, 74, 0.1);
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+}
+
+.rb-impact-compact-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.rb-impact-compact-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--rb-text-muted);
+  font-weight: 500;
+  flex-wrap: wrap;
+}
+
+.rb-impact-compact-stats i {
+  font-size: 0.72rem;
+  margin-right: 0.15rem;
+}
+
+.rb-impact-compact-divider {
+  color: var(--rb-text-tertiary);
+  font-size: 0.6rem;
+}
+
+/* ==================== MINIMAL ==================== */
+.rb-impact-minimal {
+  padding: 0.55rem 0;
+}
+
+.rb-impact-minimal-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+  border: 1px solid rgba(22, 163, 74, 0.12);
+  border-radius: var(--rb-radius-full);
+  font-size: 0.8rem;
+  color: var(--rb-text-secondary);
+  font-weight: 500;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.rb-impact-minimal-inner i {
+  color: #16a34a;
+  font-size: 0.9rem;
+}
+
+.rb-impact-minimal-inner strong {
+  color: var(--rb-text-primary);
+  font-weight: 700;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 575.98px) {
+  .rb-impact-banner {
+    padding: 2rem 0;
+  }
+
+  .rb-impact-item {
+    padding: 0.9rem 0.5rem;
+  }
+
+  .rb-impact-item-value {
+    font-size: 1.1rem;
+  }
+
+  .rb-impact-motivation {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .rb-impact-compact-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+  }
+
+  .rb-impact-compact-divider {
+    display: none;
+  }
+}

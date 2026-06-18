@@ -1,0 +1,459 @@
+/* ========================================
+   Dashboard Styles
+   ======================================== */
+
+.rb-dashboard {
+  padding: 6rem 0 3rem;
+  min-height: 100vh;
+}
+
+/* ---------- Header ---------- */
+.rb-dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.rb-dash-greeting {
+  font-family: var(--rb-font-heading);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.rb-wave {
+  display: inline-block;
+  margin-left: 0.3rem;
+  animation: wave 2s ease-in-out infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60%, 100% { transform: rotate(0deg); }
+}
+
+.rb-dash-subtitle {
+  font-size: 0.92rem;
+  color: var(--rb-text-muted);
+  margin: 0;
+}
+
+/* ---------- Stat Cards ---------- */
+.rb-stat-card {
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  padding: 1.25rem;
+  transition: all var(--rb-transition-base);
+  height: 100%;
+}
+
+.rb-stat-card:hover {
+  box-shadow: var(--rb-shadow-md);
+  transform: translateY(-2px);
+}
+
+.rb-stat-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--rb-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.rb-stat-card-value {
+  font-family: var(--rb-font-heading);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+  line-height: 1.2;
+}
+
+.rb-stat-card-label {
+  font-size: 0.8rem;
+  color: var(--rb-text-muted);
+  font-weight: 500;
+  margin-top: 0.1rem;
+}
+
+/* ---------- Quick Actions ---------- */
+.rb-quick-action {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.15rem;
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  text-decoration: none !important;
+  transition: all var(--rb-transition-base);
+  height: 100%;
+}
+
+.rb-quick-action:hover {
+  box-shadow: var(--rb-shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--rb-primary-100);
+}
+
+.rb-quick-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: var(--rb-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+}
+
+.rb-quick-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--rb-text-primary);
+  margin-bottom: 0.1rem;
+}
+
+.rb-quick-desc {
+  font-size: 0.78rem;
+  color: var(--rb-text-muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.rb-quick-arrow {
+  margin-left: auto;
+  color: var(--rb-text-tertiary);
+  font-size: 0.85rem;
+  transition: transform var(--rb-transition-fast);
+}
+
+.rb-quick-action:hover .rb-quick-arrow {
+  transform: translateX(3px);
+  color: var(--rb-primary);
+}
+
+/* ---------- Dashboard Sections ---------- */
+.rb-dash-section {
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rb-dash-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.1rem;
+}
+
+.rb-dash-section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+  margin: 0;
+}
+
+.rb-dash-section-title i {
+  color: var(--rb-text-tertiary);
+}
+
+.rb-dash-view-all {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--rb-primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: gap var(--rb-transition-fast);
+}
+
+.rb-dash-view-all:hover {
+  gap: 0.5rem;
+  color: var(--rb-primary-dark);
+}
+
+.rb-dash-view-all-bottom {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rb-border-light);
+  justify-content: center;
+}
+
+/* ---------- Empty State ---------- */
+.rb-dash-empty {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--rb-text-tertiary);
+}
+
+.rb-dash-empty i {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.rb-dash-empty p {
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- Ride List (Upcoming) ---------- */
+.rb-ride-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.rb-ride-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--rb-border-light);
+  transition: background var(--rb-transition-fast);
+}
+
+.rb-ride-row:last-child {
+  border-bottom: none;
+}
+
+.rb-ride-row:hover {
+  background: var(--rb-bg-alt);
+  margin: 0 -1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: var(--rb-radius-sm);
+}
+
+/* Route column */
+.rb-ride-route-col {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 2;
+  min-width: 0;
+}
+
+.rb-ride-route-dots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 0;
+}
+
+.rb-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.rb-dot-green { background: var(--rb-green); }
+.rb-dot-blue { background: var(--rb-primary); }
+
+.rb-dot-line {
+  width: 2px;
+  height: 14px;
+  background: var(--rb-border);
+  border-radius: 1px;
+}
+
+.rb-ride-origin {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--rb-text-primary);
+  line-height: 1.3;
+}
+
+.rb-ride-dest {
+  font-size: 0.82rem;
+  color: var(--rb-text-muted);
+  line-height: 1.3;
+}
+
+/* Meta column */
+.rb-ride-meta-col,
+.rb-ride-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+}
+
+.rb-ride-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--rb-text-muted);
+  font-weight: 500;
+}
+
+.rb-ride-meta-item i {
+  font-size: 0.75rem;
+  color: var(--rb-text-tertiary);
+}
+
+.rb-ride-price {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+}
+
+/* Role badge */
+.rb-ride-action-col {
+  flex-shrink: 0;
+}
+
+.rb-role-badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--rb-radius-full);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.rb-role-creator {
+  background: var(--rb-primary-50);
+  color: var(--rb-primary);
+}
+
+.rb-role-passenger {
+  background: var(--rb-green-50);
+  color: var(--rb-green);
+}
+
+/* ---------- Request List ---------- */
+.rb-request-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+
+.rb-request-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--rb-border-light);
+}
+
+.rb-request-row:last-child {
+  border-bottom: none;
+}
+
+.rb-request-avatar {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background: var(--rb-primary);
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rb-request-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.rb-request-user {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--rb-text-primary);
+  line-height: 1.3;
+}
+
+.rb-request-ride {
+  font-size: 0.76rem;
+  color: var(--rb-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rb-request-time {
+  font-size: 0.72rem;
+  color: var(--rb-text-tertiary);
+}
+
+/* Status badges */
+.rb-status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--rb-radius-full);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  flex-shrink: 0;
+}
+
+.rb-status-pending {
+  background: var(--rb-amber-50);
+  color: var(--rb-amber);
+}
+
+.rb-status-accepted {
+  background: var(--rb-green-50);
+  color: var(--rb-green);
+}
+
+.rb-status-rejected {
+  background: var(--rb-danger-50);
+  color: var(--rb-danger);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991.98px) {
+  .rb-ride-row {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .rb-ride-route-col { flex: 1 1 100%; }
+  .rb-ride-meta-col { flex: 1; flex-direction: row; gap: 1rem; }
+  .rb-ride-info-col { flex: 1; flex-direction: row; gap: 1rem; align-items: center; }
+  .rb-ride-action-col { flex: 0; }
+}
+
+@media (max-width: 575.98px) {
+  .rb-dashboard { padding-top: 5rem; }
+
+  .rb-dash-header {
+    flex-direction: column;
+  }
+
+  .rb-dash-greeting {
+    font-size: 1.35rem;
+  }
+
+  .rb-dash-section {
+    padding: 1.1rem;
+  }
+}

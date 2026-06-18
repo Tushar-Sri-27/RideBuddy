@@ -1,0 +1,276 @@
+/* ========================================
+   Auth Pages — Login & Register (shared)
+   ======================================== */
+
+.rb-auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1rem 3rem;
+  background:
+    radial-gradient(ellipse at 20% 0%, var(--rb-primary-50) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, #ede9fe40 0%, transparent 50%),
+    var(--rb-bg);
+}
+
+/* ---------- Card ---------- */
+.rb-auth-card {
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  box-shadow: var(--rb-shadow-lg);
+  padding: 2.5rem 2.25rem;
+  animation: fadeInUp 0.45s ease;
+}
+
+@media (max-width: 575.98px) {
+  .rb-auth-card {
+    padding: 2rem 1.5rem;
+    border-radius: var(--rb-radius-md);
+  }
+}
+
+/* ---------- Header ---------- */
+.rb-auth-header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.rb-auth-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none !important;
+  margin-bottom: 1.25rem;
+}
+
+.rb-auth-logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--rb-primary);
+  border-radius: 7px;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.rb-auth-logo-text {
+  font-family: var(--rb-font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--rb-text-primary);
+  letter-spacing: -0.3px;
+}
+
+.rb-auth-logo-highlight {
+  color: var(--rb-primary);
+}
+
+.rb-auth-title {
+  font-family: var(--rb-font-heading);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.rb-auth-subtitle {
+  font-size: 0.9rem;
+  color: var(--rb-text-muted);
+  margin: 0;
+}
+
+/* ---------- Social Auth ---------- */
+.rb-social-auth {
+  margin-bottom: 1.25rem;
+}
+
+.rb-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-sm);
+  font-family: var(--rb-font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--rb-text-primary);
+  cursor: pointer;
+  transition: all var(--rb-transition-base);
+}
+
+.rb-social-btn:hover {
+  background: var(--rb-bg-alt);
+  border-color: var(--rb-text-tertiary);
+}
+
+/* ---------- Divider ---------- */
+.rb-auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.rb-auth-divider::before,
+.rb-auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rb-border);
+}
+
+.rb-auth-divider span {
+  font-size: 0.78rem;
+  color: var(--rb-text-tertiary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ---------- Form ---------- */
+.rb-auth-form .form-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--rb-text-secondary);
+}
+
+.rb-input-group {
+  position: relative;
+}
+
+.rb-input-icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--rb-text-tertiary);
+  font-size: 0.95rem;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.rb-input-with-icon {
+  padding-left: 2.5rem !important;
+}
+
+.rb-toggle-password {
+  position: absolute;
+  right: 0.65rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--rb-text-tertiary);
+  cursor: pointer;
+  padding: 0.2rem;
+  font-size: 1rem;
+  transition: color var(--rb-transition-fast);
+  z-index: 2;
+}
+
+.rb-toggle-password:hover {
+  color: var(--rb-primary);
+}
+
+.rb-forgot-link {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--rb-primary);
+  text-decoration: none;
+}
+
+.rb-forgot-link:hover {
+  color: var(--rb-primary-dark);
+  text-decoration: underline;
+}
+
+/* Checkbox */
+.rb-check-label {
+  font-size: 0.84rem;
+  color: var(--rb-text-muted);
+}
+
+.form-check-input:checked {
+  background-color: var(--rb-primary);
+  border-color: var(--rb-primary);
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 3px var(--rb-primary-glow);
+  border-color: var(--rb-primary);
+}
+
+/* Full-width button */
+.rb-btn-full {
+  width: 100%;
+  justify-content: center;
+  padding: 0.75rem 1.5rem !important;
+  font-size: 0.92rem !important;
+}
+
+/* ---------- Footer ---------- */
+.rb-auth-footer-text {
+  text-align: center;
+  font-size: 0.86rem;
+  color: var(--rb-text-muted);
+  margin: 1.5rem 0 0;
+}
+
+.rb-auth-link {
+  color: var(--rb-primary);
+  font-weight: 600;
+}
+
+.rb-auth-link:hover {
+  color: var(--rb-primary-dark);
+  text-decoration: underline;
+}
+
+/* ---------- Register-specific ---------- */
+.rb-optional-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--rb-text-tertiary);
+  background: var(--rb-bg-alt);
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--rb-radius-full);
+  margin-left: 0.35rem;
+  vertical-align: middle;
+}
+
+.rb-field-hint {
+  display: block;
+  font-size: 0.78rem;
+  margin-top: 0.35rem;
+  font-weight: 500;
+}
+
+.rb-field-hint-warn {
+  color: var(--rb-amber);
+}
+
+.rb-field-hint-error {
+  color: var(--rb-danger);
+}
+
+.rb-input-error {
+  border-color: var(--rb-danger) !important;
+}
+
+.rb-input-error:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12) !important;
+  border-color: var(--rb-danger) !important;
+}
+
+.rb-btn-full:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none !important;
+}

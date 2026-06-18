@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ImpactBanner from '../components/ImpactBanner';
 import './Home.css';
 
 function Home() {
@@ -308,6 +309,9 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* ==================== IMPACT ==================== */}
+      <ImpactBanner variant="community" size="full" />
 
       {/* ==================== CTA ==================== */}
       <section className="rb-cta-section">
