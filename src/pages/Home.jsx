@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import ImpactBanner from '../components/ImpactBanner';
+import SpeedAura from '../components/SpeedAura';
 import './Home.css';
 
 function Home() {
@@ -62,6 +63,7 @@ function Home() {
   ];
 
   return (
+    <SpeedAura>
     <main className="rb-home">
       {/* ==================== HERO ==================== */}
       <section className="rb-hero">
@@ -338,6 +340,7 @@ function Home() {
         </div>
       </section>
     </main>
+    </SpeedAura>
   );
 }
 

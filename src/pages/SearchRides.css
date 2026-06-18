@@ -1,0 +1,338 @@
+/* ========================================
+   Search Rides Page Styles
+   ======================================== */
+
+.rb-search-page {
+  padding: 6rem 0 3rem;
+  min-height: 100vh;
+}
+
+/* Reuse page header from CreateRide */
+.rb-search-page .rb-page-header { margin-bottom: 1.5rem; }
+.rb-search-page .rb-page-title {
+  font-family: var(--rb-font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+  margin-bottom: 0.25rem;
+}
+.rb-search-page .rb-page-subtitle {
+  font-size: 0.92rem;
+  color: var(--rb-text-muted);
+  margin: 0;
+}
+
+/* ---------- Search Bar ---------- */
+.rb-search-bar {
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  box-shadow: var(--rb-shadow-sm);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Input group reuse */
+.rb-search-page .rb-input-group { position: relative; }
+.rb-search-page .rb-input-icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 2;
+}
+.rb-search-page .rb-input-with-icon { padding-left: 2.2rem !important; }
+
+.rb-btn-icon {
+  padding: 0.65rem 0.75rem !important;
+  font-size: 0.85rem !important;
+}
+
+/* ---------- Results Info ---------- */
+.rb-search-results-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.rb-results-count {
+  font-size: 0.85rem;
+  color: var(--rb-text-muted);
+}
+
+.rb-results-count strong {
+  color: var(--rb-text-primary);
+}
+
+.rb-results-filter-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.55rem;
+  background: var(--rb-primary-50);
+  color: var(--rb-primary);
+  border-radius: var(--rb-radius-full);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* ---------- Empty State ---------- */
+.rb-empty-search {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+}
+
+.rb-empty-search i {
+  font-size: 2.5rem;
+  color: var(--rb-text-tertiary);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.rb-empty-search h5 {
+  font-size: 1.1rem;
+  color: var(--rb-text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.rb-empty-search p {
+  font-size: 0.88rem;
+  color: var(--rb-text-muted);
+  margin-bottom: 1.25rem;
+}
+
+/* ---------- Search Card ---------- */
+.rb-search-card {
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  padding: 1.25rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--rb-transition-base);
+}
+
+.rb-search-card:hover {
+  box-shadow: var(--rb-shadow-md);
+  transform: translateY(-3px);
+  border-color: var(--rb-primary-100);
+}
+
+/* Card Top */
+.rb-search-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.9rem;
+}
+
+.rb-search-vehicle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.rb-search-vehicle-emoji {
+  font-size: 1.3rem;
+}
+
+.rb-search-vehicle-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--rb-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.rb-search-price {
+  font-family: var(--rb-font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+}
+
+.rb-search-price span {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--rb-text-muted);
+}
+
+/* Route */
+.rb-search-route {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+
+.rb-search-route-dots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 3px 0;
+}
+
+.rb-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.rb-dot-green { background: var(--rb-green); }
+.rb-dot-blue { background: var(--rb-primary); }
+
+.rb-dot-line-v {
+  width: 2px;
+  height: 14px;
+  background: var(--rb-border);
+  border-radius: 1px;
+}
+
+.rb-search-route-names { flex: 1; }
+
+.rb-search-origin {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--rb-text-primary);
+  line-height: 1.25;
+  margin-bottom: 0.45rem;
+}
+
+.rb-search-dest {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--rb-text-primary);
+  line-height: 1.25;
+}
+
+/* Meta chips */
+.rb-search-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.rb-search-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.6rem;
+  background: var(--rb-bg-alt);
+  border-radius: var(--rb-radius-full);
+  font-size: 0.72rem;
+  color: var(--rb-text-muted);
+  font-weight: 500;
+}
+
+.rb-search-chip i { font-size: 0.65rem; }
+
+.rb-search-chip-accent {
+  background: var(--rb-green-50);
+  color: var(--rb-green);
+}
+
+/* Description */
+.rb-search-desc {
+  font-size: 0.8rem;
+  color: var(--rb-text-muted);
+  line-height: 1.5;
+  margin-bottom: 0.85rem;
+  flex: 1;
+}
+
+/* Card Footer */
+.rb-search-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--rb-border-light);
+  margin-top: auto;
+}
+
+.rb-search-creator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rb-search-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--rb-primary);
+  color: #ffffff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rb-search-creator-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--rb-text-primary);
+  line-height: 1.2;
+}
+
+.rb-search-creator-rating {
+  font-size: 0.72rem;
+  color: var(--rb-amber);
+  font-weight: 600;
+}
+
+.rb-search-creator-rating i {
+  font-size: 0.62rem;
+}
+
+/* Join Button */
+.rb-btn-join {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.9rem;
+  font-family: var(--rb-font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--rb-green);
+  border: none;
+  border-radius: var(--rb-radius-sm);
+  cursor: pointer;
+  transition: all var(--rb-transition-base);
+}
+
+.rb-btn-join:hover {
+  background: #15803d;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.25);
+}
+
+.rb-btn-join.joined {
+  background: var(--rb-primary);
+  cursor: default;
+  animation: joinPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes joinPop {
+  0% { transform: scale(0.9); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.rb-btn-join:disabled {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 575.98px) {
+  .rb-search-page { padding-top: 5rem; }
+
+  .rb-search-bar {
+    padding: 1rem;
+  }
+}

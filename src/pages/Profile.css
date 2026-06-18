@@ -1,0 +1,285 @@
+/* ========================================
+   Profile Page Styles
+   ======================================== */
+
+.rb-profile-page {
+  padding: 6rem 0 3rem;
+  min-height: 100vh;
+}
+
+/* ---------- Profile Card ---------- */
+.rb-profile-card {
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  overflow: hidden;
+  text-align: center;
+}
+
+.rb-profile-avatar-section {
+  padding: 2rem 1.5rem 1.25rem;
+  background: linear-gradient(135deg, var(--rb-primary-50), #ede9fe40);
+}
+
+.rb-profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--rb-primary);
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  border: 3px solid #ffffff;
+  box-shadow: var(--rb-shadow-md);
+}
+
+.rb-profile-name {
+  font-family: var(--rb-font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.rb-profile-email {
+  font-size: 0.82rem;
+  color: var(--rb-text-muted);
+  margin-bottom: 0.65rem;
+}
+
+.rb-profile-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+
+.rb-profile-rating i { color: var(--rb-amber); font-size: 0.8rem; }
+.rb-profile-rating-value { font-weight: 700; color: var(--rb-text-primary); }
+.rb-profile-rating-count { font-size: 0.75rem; color: var(--rb-text-muted); }
+
+.rb-profile-joined {
+  font-size: 0.76rem;
+  color: var(--rb-text-tertiary);
+}
+
+/* Stats row */
+.rb-profile-stats {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--rb-border-light);
+}
+
+.rb-profile-stat {
+  flex: 1;
+  text-align: center;
+}
+
+.rb-profile-stat-value {
+  font-family: var(--rb-font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--rb-text-primary);
+}
+
+.rb-profile-stat-label {
+  font-size: 0.7rem;
+  color: var(--rb-text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.rb-profile-stat-divider {
+  width: 1px;
+  height: 28px;
+  background: var(--rb-border-light);
+}
+
+/* Quick Impact */
+.rb-profile-impact {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--rb-border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rb-profile-impact-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--rb-text-secondary);
+}
+
+.rb-profile-impact-row strong {
+  color: var(--rb-text-primary);
+}
+
+/* ---------- Profile Details Card ---------- */
+.rb-profile-details {
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.rb-profile-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.rb-profile-details-title {
+  font-family: var(--rb-font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+  margin: 0;
+}
+
+/* Info grid (view mode) */
+.rb-profile-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+
+.rb-profile-info-full {
+  grid-column: 1 / -1;
+}
+
+.rb-profile-info-label {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--rb-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 0.2rem;
+}
+
+.rb-profile-info-value {
+  font-size: 0.9rem;
+  color: var(--rb-text-primary);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Edit form */
+.rb-profile-form .form-label {
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--rb-text-secondary);
+}
+
+.rb-profile-form-actions {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+/* ---------- Badges / Achievements ---------- */
+.rb-profile-badges {
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  padding: 1.5rem;
+}
+
+.rb-profile-badges .rb-profile-details-title {
+  margin-bottom: 1rem;
+}
+
+.rb-badges-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+}
+
+.rb-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.8rem 0.9rem;
+  border-radius: var(--rb-radius-md);
+  border: 1px solid var(--rb-border-light);
+  transition: all var(--rb-transition-base);
+  position: relative;
+}
+
+.rb-badge-item.earned {
+  background: var(--rb-bg-card);
+}
+
+.rb-badge-item.earned:hover {
+  box-shadow: var(--rb-shadow-sm);
+  transform: translateY(-2px);
+}
+
+.rb-badge-item.locked {
+  background: var(--rb-bg-alt);
+  opacity: 0.55;
+}
+
+.rb-badge-emoji {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.rb-badge-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--rb-text-primary);
+  line-height: 1.3;
+}
+
+.rb-badge-desc {
+  font-size: 0.72rem;
+  color: var(--rb-text-muted);
+  line-height: 1.4;
+}
+
+.rb-badge-lock {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.6rem;
+  font-size: 0.7rem;
+  color: var(--rb-text-tertiary);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991.98px) {
+  .rb-profile-avatar-section {
+    padding: 1.5rem 1.25rem 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .rb-profile-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rb-badges-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .rb-profile-page { padding-top: 5rem; }
+
+  .rb-profile-details,
+  .rb-profile-badges {
+    padding: 1.15rem;
+  }
+}

@@ -1,0 +1,348 @@
+/* ========================================
+   Create Ride Page Styles
+   ======================================== */
+
+.rb-create-ride-page {
+  padding: 6rem 0 3rem;
+  min-height: 100vh;
+}
+
+/* ---------- Page Header ---------- */
+.rb-page-header {
+  margin-bottom: 1.75rem;
+}
+
+.rb-page-title {
+  font-family: var(--rb-font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.rb-page-subtitle {
+  font-size: 0.92rem;
+  color: var(--rb-text-muted);
+  margin: 0;
+}
+
+/* ---------- Form ---------- */
+.rb-ride-form {
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  box-shadow: var(--rb-shadow-sm);
+  padding: 0;
+}
+
+/* Form Sections */
+.rb-form-section {
+  padding: 1.5rem 1.75rem;
+  border-bottom: 1px solid var(--rb-border-light);
+}
+
+.rb-form-section:last-of-type {
+  border-bottom: none;
+}
+
+.rb-form-section-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rb-form-section-title i {
+  color: var(--rb-primary);
+  font-size: 0.95rem;
+}
+
+.rb-form-section-title .rb-optional-tag {
+  margin-left: auto;
+}
+
+/* ---------- Vehicle Grid ---------- */
+.rb-vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.65rem;
+}
+
+.rb-vehicle-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.9rem 0.5rem;
+  background: var(--rb-bg);
+  border: 2px solid var(--rb-border);
+  border-radius: var(--rb-radius-md);
+  cursor: pointer;
+  transition: all var(--rb-transition-base);
+  font-family: var(--rb-font-body);
+}
+
+.rb-vehicle-option:hover {
+  border-color: var(--rb-primary-light);
+  background: var(--rb-primary-50);
+}
+
+.rb-vehicle-option.active {
+  border-color: var(--rb-primary);
+  background: var(--rb-primary-50);
+  box-shadow: 0 0 0 3px var(--rb-primary-glow);
+}
+
+.rb-vehicle-emoji {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.rb-vehicle-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--rb-text-secondary);
+}
+
+.rb-vehicle-option.active .rb-vehicle-label {
+  color: var(--rb-primary);
+}
+
+/* ---------- Form Actions ---------- */
+.rb-form-actions {
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  gap: 0.75rem;
+  border-top: 1px solid var(--rb-border-light);
+}
+
+/* ---------- Sidebar ---------- */
+.rb-create-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: sticky;
+  top: 90px;
+}
+
+/* Tips Card */
+.rb-tips-card {
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  padding: 1.25rem;
+}
+
+.rb-tips-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+  margin-bottom: 0.85rem;
+}
+
+.rb-tips-title i {
+  color: var(--rb-amber-light);
+}
+
+.rb-tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.rb-tips-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--rb-text-muted);
+  line-height: 1.45;
+}
+
+.rb-tips-list li i {
+  color: var(--rb-green);
+  font-size: 0.72rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+/* Earnings Card */
+.rb-earnings-card {
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border: 1px solid rgba(217, 119, 6, 0.12);
+  border-radius: var(--rb-radius-lg);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.rb-earnings-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--rb-amber);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rb-earnings-value {
+  font-family: var(--rb-font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #92400e;
+  margin-bottom: 0.15rem;
+}
+
+.rb-earnings-desc {
+  font-size: 0.76rem;
+  color: #b45309;
+}
+
+/* ---------- Success State ---------- */
+.rb-success-card {
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  box-shadow: var(--rb-shadow-lg);
+  padding: 3rem 2.5rem;
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.rb-success-icon {
+  font-size: 3.5rem;
+  color: var(--rb-green);
+  margin-bottom: 1rem;
+  animation: successPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes successPop {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+.rb-success-title {
+  font-family: var(--rb-font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.rb-success-desc {
+  font-size: 0.92rem;
+  color: var(--rb-text-muted);
+  max-width: 400px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.rb-success-impact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--rb-bg-alt);
+  border-radius: var(--rb-radius-md);
+}
+
+.rb-success-impact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--rb-text-secondary);
+}
+
+.rb-success-impact-item i {
+  color: var(--rb-green);
+}
+
+.rb-success-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---------- Input group (reuse from Login.css) ---------- */
+.rb-create-ride-page .rb-input-group {
+  position: relative;
+}
+
+.rb-create-ride-page .rb-input-icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--rb-text-tertiary);
+  font-size: 0.95rem;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.rb-create-ride-page .rb-input-with-icon {
+  padding-left: 2.5rem !important;
+}
+
+/* form-select override */
+.rb-create-ride-page .form-select {
+  background-color: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  color: var(--rb-text-primary);
+  border-radius: var(--rb-radius-sm);
+  padding: 0.65rem 1rem;
+  font-size: 0.92rem;
+}
+
+.rb-create-ride-page .form-select:focus {
+  border-color: var(--rb-primary);
+  box-shadow: 0 0 0 3px var(--rb-primary-glow);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991.98px) {
+  .rb-create-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .rb-create-ride-page {
+    padding-top: 5rem;
+  }
+
+  .rb-form-section {
+    padding: 1.15rem 1.15rem;
+  }
+
+  .rb-form-actions {
+    padding: 1rem 1.15rem;
+    flex-direction: column;
+  }
+
+  .rb-form-actions .rb-btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .rb-vehicle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rb-success-card {
+    padding: 2rem 1.5rem;
+    margin-top: 5rem;
+  }
+}

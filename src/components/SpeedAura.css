@@ -1,0 +1,211 @@
+/* ========================================
+   Speed Aura — Reactive Background + Messages
+   ======================================== */
+
+.rb-speed-aura {
+  position: relative;
+}
+
+/* ---------- Gradient Overlay ---------- */
+.rb-aura-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  transition: background 1.2s ease, opacity 1.2s ease;
+  opacity: 0;
+}
+
+/* Calm — soft green/mint wash (safe driving) */
+.rb-speed-calm .rb-aura-overlay {
+  background: radial-gradient(
+    ellipse at 50% 30%,
+    rgba(16, 185, 129, 0.06) 0%,
+    rgba(52, 211, 153, 0.03) 40%,
+    transparent 70%
+  );
+  opacity: 1;
+}
+
+/* Moderate — barely visible soft blue */
+.rb-speed-moderate .rb-aura-overlay {
+  background: radial-gradient(
+    ellipse at 50% 30%,
+    rgba(37, 99, 235, 0.04) 0%,
+    rgba(59, 130, 246, 0.02) 40%,
+    transparent 70%
+  );
+  opacity: 1;
+}
+
+/* Fast — warm amber/peach tint */
+.rb-speed-fast .rb-aura-overlay {
+  background: radial-gradient(
+    ellipse at 50% 30%,
+    rgba(245, 158, 11, 0.08) 0%,
+    rgba(251, 191, 36, 0.04) 40%,
+    transparent 70%
+  );
+  opacity: 1;
+}
+
+/* Danger — soft red-orange pulse */
+.rb-speed-danger .rb-aura-overlay {
+  background: radial-gradient(
+    ellipse at 50% 30%,
+    rgba(239, 68, 68, 0.07) 0%,
+    rgba(249, 115, 22, 0.04) 35%,
+    transparent 65%
+  );
+  opacity: 1;
+  animation: auraPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes auraPulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+/* ---------- Speed Indicator (top-right pill) ---------- */
+.rb-speed-indicator {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1040;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-full);
+  box-shadow: var(--rb-shadow-sm);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--rb-text-secondary);
+  transition: all 0.5s ease;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.rb-speed-indicator:hover {
+  opacity: 1;
+}
+
+.rb-speed-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+/* Dot colors per level */
+.rb-speed-calm .rb-speed-dot {
+  background: #10b981;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.4);
+}
+
+.rb-speed-calm .rb-speed-label { color: #059669; }
+
+.rb-speed-moderate .rb-speed-dot {
+  background: #3b82f6;
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.4);
+}
+
+.rb-speed-moderate .rb-speed-label { color: #2563eb; }
+
+.rb-speed-fast .rb-speed-dot {
+  background: #f59e0b;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+  animation: dotPulse 0.8s ease-in-out infinite;
+}
+
+.rb-speed-fast .rb-speed-label { color: #d97706; }
+
+.rb-speed-danger .rb-speed-dot {
+  background: #ef4444;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+  animation: dotPulse 0.4s ease-in-out infinite;
+}
+
+.rb-speed-danger .rb-speed-label { color: #dc2626; }
+
+@keyframes dotPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+}
+
+/* ---------- Message Toast ---------- */
+.rb-aura-message {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  z-index: 1040;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1.3rem;
+  border-radius: var(--rb-radius-full);
+  font-size: 0.86rem;
+  font-weight: 600;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  white-space: nowrap;
+  box-shadow: var(--rb-shadow-lg);
+}
+
+.rb-aura-message.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Safe variant — green tones */
+.rb-aura-message.safe {
+  background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+  border: 1px solid rgba(16, 163, 74, 0.15);
+  color: #15803d;
+}
+
+/* Warning variant — amber tones */
+.rb-aura-message.warn {
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border: 1px solid rgba(217, 119, 6, 0.15);
+  color: #b45309;
+}
+
+.rb-aura-message-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.rb-aura-message-text {
+  letter-spacing: -0.2px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 767.98px) {
+  .rb-speed-indicator {
+    top: auto;
+    bottom: 80px;
+    right: 12px;
+    font-size: 0.65rem;
+    padding: 0.3rem 0.65rem;
+  }
+
+  .rb-aura-message {
+    bottom: 20px;
+    font-size: 0.78rem;
+    padding: 0.6rem 1rem;
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .rb-speed-indicator {
+    display: none;
+  }
+}
