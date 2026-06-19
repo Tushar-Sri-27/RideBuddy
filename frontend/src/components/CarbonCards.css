@@ -1,0 +1,134 @@
+/* ========================================
+   Carbon Awareness Cards
+   ======================================== */
+
+/* ---------- Inline Carbon Saved Badge ---------- */
+.rb-carbon-saved {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.65rem;
+  background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+  border: 1px solid rgba(22, 163, 74, 0.1);
+  border-radius: var(--rb-radius-full);
+  font-size: 0.7rem;
+  color: #15803d;
+  font-weight: 500;
+}
+
+.rb-carbon-saved-icon {
+  font-size: 0.8rem;
+}
+
+.rb-carbon-saved strong {
+  font-weight: 700;
+}
+
+/* ---------- Carbon Comparison ---------- */
+.rb-carbon-comparison {
+  padding: 1rem;
+  background: var(--rb-bg-alt);
+  border-radius: var(--rb-radius-md);
+}
+
+.rb-carbon-comparison-title {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--rb-text-secondary);
+  margin-bottom: 0.65rem;
+}
+
+.rb-carbon-comparison-title i {
+  color: var(--rb-text-tertiary);
+  font-size: 0.7rem;
+}
+
+.rb-carbon-comparison-grid {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rb-carbon-compare-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.65rem 0.4rem;
+  background: var(--rb-bg-card);
+  border-radius: var(--rb-radius-sm);
+  border: 1px solid var(--rb-border-light);
+  text-align: center;
+  transition: transform var(--rb-transition-fast);
+}
+
+.rb-carbon-compare-item:hover {
+  transform: translateY(-2px);
+}
+
+.rb-carbon-compare-emoji {
+  font-size: 1.3rem;
+}
+
+.rb-carbon-compare-text {
+  font-size: 0.68rem;
+  color: var(--rb-text-muted);
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+/* ---------- Did You Know ---------- */
+.rb-did-you-know {
+  padding: 0.85rem 1rem;
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border: 1px solid rgba(217, 119, 6, 0.1);
+  border-radius: var(--rb-radius-md);
+}
+
+.rb-dyk-header {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.rb-dyk-icon {
+  font-size: 0.95rem;
+}
+
+.rb-dyk-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #b45309;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.rb-dyk-text {
+  font-size: 0.8rem;
+  color: #92400e;
+  line-height: 1.55;
+  margin: 0;
+  animation: dykFade 0.5s ease;
+}
+
+@keyframes dykFade {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 575.98px) {
+  .rb-carbon-comparison-grid {
+    flex-direction: column;
+  }
+
+  .rb-carbon-compare-item {
+    flex-direction: row;
+    text-align: left;
+    gap: 0.5rem;
+  }
+}

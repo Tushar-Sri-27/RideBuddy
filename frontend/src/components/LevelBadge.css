@@ -1,0 +1,177 @@
+/* ========================================
+   Level Badge & Level Card
+   ======================================== */
+
+/* ---------- Compact Badge (Navbar) ---------- */
+.rb-level-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.65rem;
+  background: var(--rb-bg-alt);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-full);
+  cursor: default;
+  transition: all var(--rb-transition-fast);
+}
+
+.rb-level-badge:hover {
+  box-shadow: var(--rb-shadow-xs);
+}
+
+.rb-level-emoji {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.rb-level-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rb-level-name {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--rb-text-secondary);
+  line-height: 1;
+}
+
+.rb-level-bar {
+  width: 40px;
+  height: 3px;
+  background: var(--rb-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.rb-level-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.8s ease;
+}
+
+/* ---------- Detailed Card (Profile/Dashboard) ---------- */
+.rb-level-card {
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  padding: 1.25rem;
+}
+
+.rb-level-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.rb-level-card-emoji {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.rb-level-card-title {
+  font-family: var(--rb-font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+}
+
+.rb-level-card-subtitle {
+  font-size: 0.75rem;
+  color: var(--rb-text-muted);
+  font-weight: 500;
+}
+
+.rb-level-card-xp {
+  margin-left: auto;
+  font-family: var(--rb-font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--rb-green);
+}
+
+/* Progress */
+.rb-level-progress-section {
+  margin-bottom: 0.85rem;
+}
+
+.rb-level-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--rb-bg-alt);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.3rem;
+}
+
+.rb-level-progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.rb-level-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  color: var(--rb-text-tertiary);
+  font-weight: 500;
+}
+
+/* Next level */
+.rb-level-next {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.75rem;
+  background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+  border: 1px solid rgba(22, 163, 74, 0.1);
+  border-radius: var(--rb-radius-sm);
+  font-size: 0.78rem;
+  color: var(--rb-text-secondary);
+  margin-bottom: 0.85rem;
+}
+
+.rb-level-next strong {
+  color: var(--rb-green);
+}
+
+/* XP Actions */
+.rb-xp-actions {
+  border-top: 1px solid var(--rb-border-light);
+  padding-top: 0.75rem;
+}
+
+.rb-xp-actions-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--rb-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 0.5rem;
+}
+
+.rb-xp-action-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0;
+  font-size: 0.8rem;
+  color: var(--rb-text-muted);
+}
+
+.rb-xp-action-row i {
+  font-size: 0.75rem;
+  color: var(--rb-text-tertiary);
+  width: 18px;
+  text-align: center;
+}
+
+.rb-xp-value {
+  margin-left: auto;
+  font-weight: 700;
+  color: var(--rb-green);
+  font-size: 0.75rem;
+}

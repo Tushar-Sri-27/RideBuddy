@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import ImpactBanner from '../components/ImpactBanner';
+import StreakChallenge from '../components/StreakChallenge';
+import Leaderboard from '../components/Leaderboard';
 import './Dashboard.css';
 
 // Dummy user
@@ -154,6 +156,11 @@ function Dashboard() {
           ))}
         </div>
 
+        {/* ---------- Streak & Challenges ---------- */}
+        <div className="mb-4 animate-fade-in-up delay-2">
+          <StreakChallenge streakDays={5} />
+        </div>
+
         {/* ---------- Your Impact ---------- */}
         <div className="mb-4 animate-fade-in-up delay-2">
           <ImpactBanner variant="personal" size="compact" />
@@ -253,6 +260,11 @@ function Dashboard() {
               </Link>
             </div>
           </div>
+        </div>
+
+        {/* ---------- Leaderboard ---------- */}
+        <div className="mt-4 animate-fade-in-up delay-4">
+          <Leaderboard />
         </div>
       </div>
     </main>

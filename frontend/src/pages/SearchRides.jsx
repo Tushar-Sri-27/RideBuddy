@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ImpactBanner from '../components/ImpactBanner';
+import { CarbonSaved } from '../components/CarbonCards';
 import './SearchRides.css';
 
 // Dummy rides data
@@ -220,6 +221,9 @@ function SearchRides() {
                   {ride.description && (
                     <p className="rb-search-desc">{ride.description}</p>
                   )}
+
+                  {/* Carbon saved badge */}
+                  <CarbonSaved co2Kg={Math.round((ride.price * 0.03) * 10) / 10 || 2.4} />
 
                   {/* Footer */}
                   <div className="rb-search-card-footer">

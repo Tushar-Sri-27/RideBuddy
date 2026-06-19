@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import ImpactBanner from '../components/ImpactBanner';
 import SpeedAura from '../components/SpeedAura';
+import LivingEarth from '../components/LivingEarth';
 import './Home.css';
 
 function Home() {
@@ -123,7 +124,8 @@ function Home() {
 
             <div className="col-lg-5 d-none d-lg-flex justify-content-center">
               <div className="rb-hero-visual animate-fade-in-up delay-3">
-                <div className="rb-hero-card rb-glass">
+                <LivingEarth />
+                <div className="rb-hero-card rb-glass" style={{ marginTop: '1.5rem' }}>
                   <div className="rb-hero-card-header">
                     <div className="rb-hero-card-dot" style={{ background: 'var(--rb-green)' }}></div>
                     <span>Active Ride</span>

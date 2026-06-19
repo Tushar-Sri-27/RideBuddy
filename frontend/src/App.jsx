@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CursorCar from './components/CursorCar';
+import EcoCounter from './components/EcoCounter';
+import { FloatingLeaves } from './components/Confetti';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -17,6 +19,8 @@ function App() {
     <Router>
       <div className="rb-app">
         <CursorCar />
+        <EcoCounter />
+        <FloatingLeaves />
         <Navbar />
         <div className="rb-page-content">
           <Routes>

@@ -1,4 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
+import { LevelBadge } from './LevelBadge';
 import './Navbar.css';
 
 function Navbar() {
@@ -51,6 +52,7 @@ function Navbar() {
           </ul>
 
           <div className="d-flex align-items-center gap-2 ms-lg-4 mt-3 mt-lg-0">
+            <LevelBadge xp={450} />
             <Link to="/login" className="rb-btn-outline rb-btn-sm">
               Log In
             </Link>

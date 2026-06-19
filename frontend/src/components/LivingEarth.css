@@ -1,0 +1,234 @@
+/* ========================================
+   Living Earth Globe
+   ======================================== */
+
+.rb-living-earth {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  transition: transform 0.3s ease-out;
+}
+
+/* Outer glow */
+.rb-earth-glow {
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.15) 0%, transparent 70%);
+  animation: earthGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes earthGlow {
+  from { transform: scale(1); opacity: 0.7; }
+  to { transform: scale(1.08); opacity: 1; }
+}
+
+/* Globe */
+.rb-earth-globe {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 40px auto 0;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow:
+    0 0 40px rgba(34, 197, 94, 0.15),
+    inset 0 0 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Surface — gradient continents */
+.rb-earth-surface {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at 30% 35%, #22c55e 0%, transparent 25%),
+    radial-gradient(ellipse at 65% 30%, #16a34a 0%, transparent 20%),
+    radial-gradient(ellipse at 50% 65%, #4ade80 0%, transparent 22%),
+    radial-gradient(ellipse at 75% 60%, #15803d 0%, transparent 18%),
+    radial-gradient(ellipse at 20% 70%, #86efac 0%, transparent 15%),
+    linear-gradient(135deg, #60a5fa 0%, #3b82f6 30%, #2563eb 60%, #1d4ed8 100%);
+  animation: earthRotate 20s linear infinite;
+}
+
+@keyframes earthRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Atmosphere */
+.rb-earth-atmosphere {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 3px solid rgba(96, 165, 250, 0.2);
+  animation: atmPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes atmPulse {
+  from { border-color: rgba(96, 165, 250, 0.15); }
+  to { border-color: rgba(96, 165, 250, 0.3); }
+}
+
+/* Clouds */
+.rb-earth-clouds {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at 25% 25%, rgba(255,255,255,0.35) 0%, transparent 18%),
+    radial-gradient(ellipse at 55% 20%, rgba(255,255,255,0.3) 0%, transparent 15%),
+    radial-gradient(ellipse at 40% 70%, rgba(255,255,255,0.25) 0%, transparent 20%),
+    radial-gradient(ellipse at 70% 55%, rgba(255,255,255,0.2) 0%, transparent 14%);
+  animation: earthRotate 30s linear infinite reverse;
+}
+
+/* Shine/highlight */
+.rb-earth-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 30%,
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 50%
+  );
+}
+
+/* ---------- Orbiting Elements ---------- */
+.rb-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px dashed rgba(34, 197, 94, 0.15);
+  border-radius: 50%;
+  animation: orbitSpin linear infinite;
+}
+
+.rb-orbit-1 {
+  width: 240px; height: 240px;
+  margin: -120px 0 0 -120px;
+  animation-duration: 10s;
+}
+
+.rb-orbit-2 {
+  width: 270px; height: 270px;
+  margin: -135px 0 0 -135px;
+  animation-duration: 14s;
+  animation-direction: reverse;
+}
+
+.rb-orbit-3 {
+  width: 300px; height: 300px;
+  margin: -150px 0 0 -150px;
+  animation-duration: 18s;
+}
+
+@keyframes orbitSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rb-orbit-item {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -10px;
+  font-size: 1.2rem;
+  animation: orbitCounterSpin linear infinite;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.rb-orbit-1 .rb-orbit-item { animation-duration: 10s; }
+.rb-orbit-2 .rb-orbit-item { animation-duration: 14s; animation-direction: reverse; }
+.rb-orbit-3 .rb-orbit-item { animation-duration: 18s; }
+
+@keyframes orbitCounterSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+/* ---------- Floating Particles ---------- */
+.rb-earth-particles {
+  position: absolute;
+  inset: -20px;
+  pointer-events: none;
+}
+
+.rb-earth-particle {
+  position: absolute;
+  font-size: 0.9rem;
+  opacity: 0;
+  animation: particleFloat ease-in-out infinite;
+}
+
+@keyframes particleFloat {
+  0%, 100% { opacity: 0; transform: translateY(0) scale(0.5); }
+  30% { opacity: 0.6; }
+  50% { opacity: 0.7; transform: translateY(-20px) scale(1); }
+  70% { opacity: 0.5; }
+}
+
+/* ---------- Counter Overlay ---------- */
+.rb-earth-counter {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--rb-radius-full);
+  border: 1px solid var(--rb-border);
+  box-shadow: var(--rb-shadow-sm);
+  white-space: nowrap;
+}
+
+.rb-earth-counter-value {
+  font-family: var(--rb-font-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--rb-green);
+}
+
+.rb-earth-counter-label {
+  font-size: 0.6rem;
+  color: var(--rb-text-muted);
+  font-weight: 500;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991.98px) {
+  .rb-living-earth {
+    width: 220px;
+    height: 220px;
+  }
+
+  .rb-earth-globe {
+    width: 160px;
+    height: 160px;
+    margin-top: 30px;
+  }
+
+  .rb-orbit-1 { width: 200px; height: 200px; margin: -100px 0 0 -100px; }
+  .rb-orbit-2 { width: 220px; height: 220px; margin: -110px 0 0 -110px; }
+  .rb-orbit-3 { width: 240px; height: 240px; margin: -120px 0 0 -120px; }
+}
+
+@media (max-width: 575.98px) {
+  .rb-living-earth {
+    width: 180px;
+    height: 180px;
+  }
+
+  .rb-earth-globe {
+    width: 130px;
+    height: 130px;
+    margin-top: 25px;
+  }
+
+  .rb-orbit { display: none; }
+}

@@ -1,0 +1,207 @@
+/* ========================================
+   Leaderboard Styles
+   ======================================== */
+
+.rb-leaderboard {
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  overflow: hidden;
+}
+
+/* Header */
+.rb-leaderboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--rb-border-light);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.rb-leaderboard-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--rb-text-primary);
+  margin: 0;
+}
+
+.rb-leaderboard-title i { color: #d97706; }
+
+.rb-leaderboard-tabs {
+  display: flex;
+  gap: 0.2rem;
+  background: var(--rb-bg-alt);
+  border-radius: var(--rb-radius-sm);
+  padding: 0.2rem;
+}
+
+.rb-lb-tab {
+  padding: 0.3rem 0.65rem;
+  font-family: var(--rb-font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--rb-text-muted);
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--rb-transition-fast);
+}
+
+.rb-lb-tab.active {
+  background: var(--rb-bg-card);
+  color: var(--rb-primary);
+  box-shadow: var(--rb-shadow-xs);
+}
+
+/* ---------- Podium ---------- */
+.rb-podium {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.25rem 1rem 0.75rem;
+  order: 2;
+}
+
+.rb-podium-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem 0.6rem;
+  border-radius: var(--rb-radius-md);
+  background: var(--rb-bg-alt);
+  width: 90px;
+  position: relative;
+}
+
+.rb-podium-1 { order: 2; background: linear-gradient(135deg, #fffbeb, #fef3c7); border: 1px solid rgba(217, 119, 6, 0.15); }
+.rb-podium-2 { order: 1; background: var(--rb-bg-alt); }
+.rb-podium-3 { order: 3; background: var(--rb-bg-alt); }
+
+.rb-podium-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--rb-primary);
+  color: #ffffff;
+  font-size: 0.6rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.rb-podium-1 .rb-podium-avatar { width: 42px; height: 42px; font-size: 0.7rem; }
+
+.rb-podium-rank {
+  font-size: 1.2rem;
+  position: absolute;
+  top: -6px;
+  right: -4px;
+}
+
+.rb-podium-name {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--rb-text-primary);
+}
+
+.rb-podium-value {
+  font-size: 0.65rem;
+  color: var(--rb-text-muted);
+  font-weight: 500;
+}
+
+/* ---------- List ---------- */
+.rb-lb-list {
+  padding: 0.25rem 1.25rem;
+}
+
+.rb-lb-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--rb-border-light);
+}
+
+.rb-lb-row:last-child { border-bottom: none; }
+
+.rb-lb-rank {
+  width: 28px;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--rb-text-muted);
+}
+
+.rb-lb-avatar {
+  width: 30px; height: 30px; min-width: 30px;
+  border-radius: 50%;
+  background: var(--rb-primary);
+  color: #ffffff;
+  font-size: 0.55rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.rb-lb-info { flex: 1; min-width: 0; }
+
+.rb-lb-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--rb-text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 0.2rem;
+}
+
+.rb-lb-level {
+  font-size: 0.75rem;
+}
+
+.rb-lb-bar {
+  height: 4px;
+  background: var(--rb-bg-alt);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.rb-lb-bar-fill {
+  height: 100%;
+  background: var(--rb-primary);
+  border-radius: 2px;
+  transition: width 0.6s ease;
+}
+
+.rb-lb-metric {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--rb-text-secondary);
+  white-space: nowrap;
+}
+
+/* Current user */
+.rb-lb-current {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 1.25rem;
+  background: var(--rb-primary-50);
+  border-top: 2px solid var(--rb-primary);
+}
+
+.rb-lb-avatar-you {
+  background: var(--rb-green);
+}
+
+.rb-lb-bar-you {
+  background: var(--rb-green);
+}
+
+/* Responsive */
+@media (max-width: 575.98px) {
+  .rb-podium-item { width: 75px; padding: 0.6rem 0.4rem; }
+  .rb-podium-avatar { width: 32px; height: 32px; }
+  .rb-podium-1 .rb-podium-avatar { width: 36px; height: 36px; }
+}
