@@ -73,6 +73,17 @@ const rideSchema = new mongoose.Schema(
       ref: "Colony",
       default: null,
     },
+
+    routeDistance: {
+      type: Number,
+      default: 0,
+    },
+
+    routeDuration: {
+      type: Number,
+      default: 0,
+    },
+    
   },
   {
     timestamps: true,

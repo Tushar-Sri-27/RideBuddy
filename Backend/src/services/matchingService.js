@@ -43,9 +43,13 @@ const findMatchingRides = async ({
 
   const scoredRides = rides.map((ride) => {
     const match = calculateMatchScore(ride, {
-      colonyId: userColonyId,
-      destinationLat,
-      destinationLng,
+    colonyId: userColonyId,
+
+    lat,
+    lng,
+
+    destinationLat,
+    destinationLng,
     });
 
     return {
